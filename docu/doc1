@@ -1,0 +1,94 @@
+# this file contains all the assumed necessary information for the learning distributed computing with hadoop
+
+Steps for setting up the hadop data platform
+1. Download VMware
+2. Download Harton Works data platform(HDP) for vmware from cloudera.com (2.6.5) - 15Gb
+3. 
+
+
+Hadoop Ecosystem
+1. HDFS - Hadoop Distributed File System for managing the files in distributed system
+1.5 YARN - Yet Another Resource Negotiator - responsible for deciding which nodes are active and inactive and helps distribute tasks to them.
+YARN decides what gets run on which machine.
+2. MapReduce - distributes the work to various nodes within the cluster called mapping and again organizes and reduces the results from each node into a cohesive answer to a query
+3. Zookeeper - selects the master node and other zookeeping tasks
+
+
+
+External Data Storage
+1. MySql
+2. Casandra
+3. Mongo DB
+
+Query engines
+1. Apache DRILL
+2. Presto
+3. Apache Zeppelin
+
+
+
+
+HDFS
+-Name Node: keeps track on whats on data node
+ -Data Node: store block of files
+ -Data Node
+ -Data Node
+
+Using HDFS
+- UI (Ambari)
+- Command-line Interface
+- Java Interface
+- NFS Gateway
+
+
+MAP REDUCE
+divides data up into partitions that are MAPPED(treansformed) and REDUCED(aggregated) by mapper and reducer functions
+
+-mapper converts raw source data into key/value pairs
+-less data you are pushing around your network in the cluster the better
+-at last we only have a bunch of key value pairs 
+-mapreduce Sorts and Groups the Mapped Data("Shuffle and Sort")
+
+
+REDUCER
+-running parallel in different nodes
+-processes/reduces/aggregates each key's value
+
+
+raw data -> mapper --> key/value pair --> mapper --> shuffle and sort -> key/value grouping about same key and sorting --> reducer --> aggregates data to count(number of datas)
+
+
+
+
+Pig 
+as writing mappers and reducers by hand takes a long time, Pig has something called Pig Latin that lets us use SQL-like syntax to define map and reduce steps. 
+-highly extensible with user-defined functions
+
+
+
+
+Spark (apache)
+helps you write scripts in many programming languages like Python, Java to perform some complex data manipulation/processing tasks
+-rich ecosystem on top of spark
+-lets you do machine learning, data mining, graph analysis
+-memory based solution --tries to reatin as much as possible in RAM
+-uses DAG -- directed asyclic graph -- to optimize work flow
+-10x faster than hadoop map reduce
+-Resilient Distributed Dataset(RDD) --> object represting dataset... various functions can be called to that
+-components 
+ -spark streaming
+ -spark sql
+ -mllib
+ -graphx
+
+the driver program is going to create an environment called spark context which is the environment that you are going to run your RDDs on/in
+
+
+
+
+
+
+
+
+
+
