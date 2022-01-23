@@ -71,7 +71,7 @@ Spark (apache)
 helps you write scripts in many programming languages like Python, Java to perform some complex data manipulation/processing tasks
 -rich ecosystem on top of spark
 -lets you do machine learning, data mining, graph analysis
--memory based solution --tries to reatin as much as possible in RAM
+-memory based solution --tries to retain as much as possible in RAM
 -uses DAG -- directed asyclic graph -- to optimize work flow
 -10x faster than hadoop map reduce
 -Resilient Distributed Dataset(RDD) --> object represting dataset... various functions can be called to that
