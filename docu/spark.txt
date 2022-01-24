@@ -1,0 +1,25 @@
+Spark Architecture
+Driver Program - Driver executes the main program of Spark application and creates SparkContext that coordinates the execution of jobs.
+Driver program assigns jobs to executors which are processes running on worker nodes of the cluster.
+YARN or Mesos which are cluster manager are responsible for allocation of physical resources to Spark Applications.
+
+
+Entry Points - communicate with the data sources
+Every Spark application needs an entry point that allows it to communicate with data sources and perform certain operations sucs as reading and writing data.
+-SparkContext
+-SQLContext
+-HiveContext
+
+
+Spark Context 
+-it is the internal engine that allows the connections with the clusters. If you want to run an operation, you need a SparkContext.
+
+import SparkContext from pyspark
+sc = SparkContext()
+
+- After getting SparkContext ready, we can create RDDs for cluster computing.
+nums = sc.parallelize([1,2,3,4])
+
+We can access rows with take
+nums.take(1). --> access first row
+
