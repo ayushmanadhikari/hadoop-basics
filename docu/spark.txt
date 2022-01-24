@@ -6,9 +6,24 @@ YARN or Mesos which are cluster manager are responsible for allocation of physic
 
 Entry Points - communicate with the data sources
 Every Spark application needs an entry point that allows it to communicate with data sources and perform certain operations sucs as reading and writing data.
+
 -SparkContext
--SQLContext
+establish communication with the cluster and resource manager inorder to execute jobs.
+it also enables access to other 2 contexts
+
+-SQLContext --> for structured data processing
+entry point to SparkSQL which is a Spark module for structured data processing.
+Once SqlContext is initialized, it can be used to perform sql-like operations over datasets and dataframes.
+
 -HiveContext
+for communicating with hive.
+
+-SparkSession
+Spark 2.0 and above supports SparkSession which is an entry point  and replaces SQLContext and HiveContext. 
+
+
+
+
 
 
 Spark Context 
