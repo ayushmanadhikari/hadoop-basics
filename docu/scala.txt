@@ -1,0 +1,19 @@
+Scala
+
+
+Singleton Objects
+A singleton is a class that can have only one instance, i.e., Object. You create singleton using the keyword object instead of class keyword.
+
+Private Objects
+A private member is visible only inside the class or object that contains the member definition.
+example: private def f()
+
+Protected Members
+A protected member is only accessible from subclasses of the class in which the member is defined.
+
+Public Members
+They can be accessed from anywhere and do not require any keyword for defining them.
+
+
+implicit functions - remaining
+
