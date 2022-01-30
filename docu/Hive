@@ -1,0 +1,43 @@
+Hive
+-uses familiar SQL syntax (HiveQL)
+-interactive -- can execute commands line by line
+-Scalable - works with big data on a cluster
+-most appropriate for data warehouse operations/applications
+-Easy OLAP queries
+-Highly optimized
+-Highly extensible
+	-User defined functions
+	-Thrift Server
+	-JDBC/ODBC driver
+
+
+Why not Hive?
+-High latency - not appropriate for OLTP
+-Stores data de-normalized
+-SQL is limited to what it can do
+	-Pig, Spark allows more complex stuff
+-No transactions
+-No record-level updates, inserts, deletes
+
+
+How Hive works
+-Hive does Schema on Read
+-takes unstructured data and applies schema when reading from it.
+-LOAD data from a cluster
+	-moves data from a distributed filesystem into Hive
+-LOAD data local
+	-copies data from your local file system into Hive
+
+
+
+
+Sqoop is used to import and export the data to/from Hive.
+
+For uing your raw data with hive, you need to follow the following steps.
+1. Import the raw data into mysql
+2. Use Sqoop to import data from MySQL to HDFS/Hive
+
+and Sqoop is used to export the data from Hadoop to MySQL.
+
+
+
