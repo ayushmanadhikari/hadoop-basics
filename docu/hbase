@@ -1,0 +1,54 @@
+NOSQL 
+-alternative to RDBMS
+-NoSQL databases (aka "not only SQL") are non-tabular databases and store data differently than relational tables
+-They provide flexible schemas and scale easily with large amounts of data and high user loads.
+
+
+-build on top of HDFS
+-non-relational, scalabale database built on HDFS
+-no query lang but has an api for quick response
+
+
+CRUD operation with API
+-no query language, only CRUD API
+
+
+web application -->hbase - it doesn't directly talk to HMaster(Master servers) but instead talks with Sharded region servers directly
+-HMaster keeps track of the contents of the Region servers and actully schemas of the data
+-HMaster depends on Zookeeper(who watches the watchers)
+-data itself is stored on BigFiles on HDFS
+
+
+HBase data model
+-fast access to any given ROW
+-a ROW is referenced by a unique key
+-each Row has some small number of Column Families
+-a Column Family may contain arbritrary Columns
+-Colummn Families may contain very large number of Columns
+-Each Cell can have many Versions with given timestamps
+-Sparse data is A.Ok. Sparse cell consume no memory
+
+
+
+Ways to access HBase
+-HBase shell
+-Java Api
+	-wrappers for Python, Scala,etc
+-Spark, Hive, Pig
+-Rest service
+
+
+
+
+CASANDRA - NoSQL with a twist
+- no master node at all
+- data model similar to BigTable/HBase
+- non-relational but has a limited CQL query language as its interface
+
+
+
+
+
+
+
+
