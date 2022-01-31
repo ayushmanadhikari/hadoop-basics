@@ -41,9 +41,17 @@ Ways to access HBase
 
 
 CASANDRA - NoSQL with a twist
-- no master node at all
-- data model similar to BigTable/HBase
-- non-relational but has a limited CQL query language as its interface
+-no master node at all
+-data model similar to BigTable/HBase
+-non-relational but has a limited CQL query language as its interface
+-CAP theorem
+	-big data requires partition tolenrence so we can choose either consistency and availability
+-it is "eventually consistent"
+
+
+-Spark and Cassandra can be easily used with one another.
+-DataStax offers a Spark-Cassandra connector
+-Allows to read and write Cassandra tables as DataFrames
 
 
 
