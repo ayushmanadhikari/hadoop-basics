@@ -1,0 +1,53 @@
+Choosing your Database
+
+-Integration considerations
+	-selecting a db which can be integrated easily with other components in the system
+-Scaling requirements
+	-how much data are we going to handle
+	-transactions rate(distributed or single machine)
+	-monlithic or distributed NoSql database
+-Support considerations
+	-security
+	-community support
+	-experts available to support you or not
+-Budget considerations? Probably not
+	-mostly open source
+-CAP considerations
+	-Availability + Partition Tolerance --> Cassandra
+	-Partition-Tolerance + Consistency --> HBASE,
+											mongoDB
+	-Availability + Consistency --> MySQL
+-Simplicity
+	-Hbase, mongoDB -- complex
+
+
+
+Example:
+1.Internal phone dorectory app
+	-scale: limited
+	-consistency: eventual is fine
+	-availability: not missin critical
+	--> MySQL
+
+2.Mine web server logs for interesting patterns
+	--> None of the above
+	--> Spark can handle the required analytics for one website
+
+3.Movie recommendations for end users
+	-availability: priority
+	-partitin-tolerence: priority
+	--> Cassandra
+
+4.Massive stock trading system
+	-consistency: priority
+	-parition-tolerence: priority 
+	--> HBASE, mongoDB
+	-mongoDB provides huge and strong Support and Security
+
+
+
+
+
+
+
+

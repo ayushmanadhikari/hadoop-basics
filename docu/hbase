@@ -85,6 +85,11 @@ Sharding
 -horizontal scaling
 -ranges of some indexed value you specify are assigned to different replica sets
 
+-mongodb doesn't setup an index like Cassandra does on your primary key.
+You need to setup the index yourself to make it efficient.
+
+
+
 
 
 

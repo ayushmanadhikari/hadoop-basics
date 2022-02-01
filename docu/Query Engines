@@ -1,0 +1,5 @@
+Query Engines
+At a high level, a query engine is a piece of software that sits on top of a database or server and executes queries against data in that database or server to provide answers for users or applications. 
+-this provides a single interface to the end users irrespective of the database system used
+
+
