@@ -47,11 +47,51 @@ CASANDRA - NoSQL with a twist
 -CAP theorem
 	-big data requires partition tolenrence so we can choose either consistency and availability
 -it is "eventually consistent"
+-Cassandra offers Availability over Consistency
+
 
 
 -Spark and Cassandra can be easily used with one another.
 -DataStax offers a Spark-Cassandra connector
 -Allows to read and write Cassandra tables as DataFrames
+
+
+
+
+MongoDB
+-a single master node to talk to all the time to ensure consistency
+-MongoDb offers Consistency over Availability
+-doesn't need same schema throughout the document
+-looks like JSON
+-No real schema is enforced,you can enforce but dont need to
+-No single Key value 
+-very flexible, you can create indices as you want for lookup
+-contains
+	-databases
+	-collections
+	-documents
+
+
+Replication Sets
+-Single-master
+-maintains backup copies of your database instance
+-repicas only address durability, not your ability to scale
+-majority of servers must agree on the primary
+	-so even number of servers dont work well
+
+
+
+Sharding
+-horizontal scaling
+-ranges of some indexed value you specify are assigned to different replica sets
+
+
+
+
+
+
+
+
 
 
 
