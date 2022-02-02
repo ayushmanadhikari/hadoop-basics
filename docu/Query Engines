@@ -4,6 +4,7 @@ At a high level, a query engine is a piece of software that sits on top of a dat
 
 
 
+
 Apache Drill
 -SQL interface on top of Non-Relational Database
 -SQL for NoSql
@@ -12,6 +13,8 @@ Apache Drill
 -Real SQL query is used
 -SQL for your entire ecosystem
 -you can perform joins on tables from different databases like 
+
+
 
 
 Apache Phoenix
@@ -26,5 +29,18 @@ Why Phoneix?
 -really fast
 -phoenix can do work of optimizing more complex queries
 	-but remember HBase is still fundamentally non-relational
+
+
+Using Phoenix
+-CLI
+-Phoenix API for Java
+-JAR's for MapReduce, Hive, Pig, Flume, Spark
+
+
+
+
+
+
+
 
 
