@@ -40,6 +40,26 @@ Using Phoenix
 
 
 
+Presto
+--like Drill
+	-can connect to many different 'big data' databases and data stores at once and query across them
+	-familiar SQL syntax
+	-optimized for OLAP - analytical queries, data warehousing
+-exposes JDBC, CLI and Tableau Interfaces
+-vs. Drill? It has a Cassandra connector
+-Presto can combine data from multiple sources, allowing for analytics across your entire organization
+
+
+What can Presto connect to
+-Cassandra
+-Hive
+-MongoDB
+-MySQL
+-Local Files
+-Kafka, PostgreSQL, Accumulo, Redis
+
+
+
 
 
 
