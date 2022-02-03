@@ -116,7 +116,17 @@ can execute SQL queries directly against SparkSQL
 
 
 
+
+
 HUE - Hadoop User Experience
+-Hortonworks
+	-Ambari used for management and query UI
+	-Zeppelin used for notebook
+-Cloudera
+	-Hue for UI and notebook
+	-Cloudera manager used for management
+
+-can set up Oozie workflow using a GUI
 
 
 
