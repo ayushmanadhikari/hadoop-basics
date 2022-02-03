@@ -18,3 +18,21 @@ What is YARN?
 	-Capacity: may run jobs in parallel if there's enough spare capacity
 	-Fair Schedulers: may cut into a larger running job if you want to squeeze in a small one
 
+
+
+
+
+
+
+TEZ 
+-application built on top of YARN
+-uses DAG - Directed Acylic Graph
+-makes Hive, Pig, MapReduce job a lot faster
+-construct DAG for more efficient processing of distributed jobs
+-optimizes physical data flow and resource usage
+
+
+
+
+
+
