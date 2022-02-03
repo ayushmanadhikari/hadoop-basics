@@ -34,5 +34,80 @@ TEZ
 
 
 
+MESOS
+-like yarn another resource negotiator
+-not just for big data stuff- it can allocate resources for web servers, small scripts, whatever
+-general purrpose system than YARN
+-YARN works for just HADOOP-big data
+-Spark runs on Mesos
+-Hadoop YARN may be integrated with Mesos using Myriad
+-YARN is a monolithic scheduler
+-Mesos is a 2-tiered system
+	-Mesos just makes offers of resources to your application(framework)
+	-your framework decides whether to accept or reject them
+	-you can also decide your own scheduling algorithm
+-YARN is optimized for long, analytical jobs like you see in Hadoop
+-Mesos can do that as well as short-lived processess
+
+
+
+
+
+ZooKeeper
+-keeps track of information that must be synchronized across your cluster
+	-which node is master?
+	-what tasks are assigned to which workers?
+	-which workers are currently available?
+-an external tool that applications can use to recover from partial failures in your cluster
+-an integral part of HBase, High0Availability (HA) MapReduce, Drill, Storm, Solr and much more
+
+Failure Modes ZooKeeper help with
+-Master crashes
+-Worker crashes
+-network Trouble: part of your cluster can't see the rest
+
+Primitive operations in a distributed system
+-master election
+-crash detection
+-group management
+-metadata
+
+Persistent and ephemeral znodes
+-persistent: remain stored until explicitly deleted
+	i.e, assignment of tasks to workers must persist even if master crashes
+-ephimeral znodes: goes away if the client that created it crashes or loses its connection to ZooKeeper
+	i.e, if the master crashes, it should release its lock on the znode that indicates which node is the master
+
+
+ZooKeeper quoroms - the number of servers that need to be written to before the task is called success
+quorum 2 - it accepts the result if 2 zookeeper servers agree on the same value
+
+
+
+
+
+OOZIE
+-Burmese name for "elephant keeper"
+-system for running and scheduling Hadoop tasks
+-workflow: tie together differnt actions in Hadoop that depend on one another
+-build DAG of actions
+	-specified via XML
+	-so you can run actions in parallel
+
+OOZIE coordinator:
+-schedules workflow execution
+-launches workflows based on a given start time and frequency
+
+OOZIE bundles
+-bundle is a collection of coordinators 
+
+
+
+
+
+
+
+
+
 
 
