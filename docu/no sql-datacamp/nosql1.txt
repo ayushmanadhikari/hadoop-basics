@@ -108,5 +108,70 @@ Redis
 
 
 
+Document Database
+-store data in documents
+-documents grouped into collections
+-documents -->row
+-collection -->tables
+-schemaless
+-fomats: JSON, YAML, XMAL, BSON
+-keys: strings
+-more complex queries than key-value db
+-polymorphic: document within the same collection 				dont need to have same structure
+
+
+Collection
+-sets of documents
+-store same type of entities
+
+
+-->Mongo DB, Dynamo DB
+
+
+Advantages
+-flexibility
+-don;t need to predefine schemas
+-avoids schema migrations
+-avoid joins
+-JSON is human-readable
+-less coding, simple and faster development
+-horizontal scalability -sharding
+
+
+Limitations
+-care about redundant data
+-care about data in application/ document data
+
+
+When to use?
+-catalogs: e-commerce, different attributes between products --> polymorphism
+-event logging
+-user profiles
+-content managemnet systems
+	-user's contents
+-real-time analytics
+
+
+Unsuitable cases
+-very structured data--- not best case
+-always have consistent data
+
+
+
+-->Mongo DB
+-document databases
+-BSON (Binary JSON) format
+-MQL query language
+-native drivers for python, java, scala
+-index any field
+-ACID transcations
+-joins in queries
+-scale horizontally
+-replication
+-
+
+
+
+
 
 
