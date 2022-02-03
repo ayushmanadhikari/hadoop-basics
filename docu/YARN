@@ -1,0 +1,20 @@
+YARN - Yet Another Resource Negotiator
+
+What is YARN?
+-separates the problem of managing resources on your cluster from MapReduce
+-you don't need to actually write code against YARN yourself in this day and age
+-it sits on top of HDFS and below MapReduce, Spark or Tez
+-it is the cluster computing resources manager
+
+-Client Node reuquests a job to be executed --> YARN kicks off the Application Master --> Application master then is responsible along with YARN for spinning off more Nodes that excute the original job
+
+-where to run all these appln process, where to spin-off the nodes, how to distribute job across them and optimizing its execution
+
+-you can specify data locality
+	-YARN will try to get your process on the same node that has your HDFS
+
+-you can specify different scheduling options for applications
+	-FIFO: first in first out
+	-Capacity: may run jobs in parallel if there's enough spare capacity
+	-Fair Schedulers: may cut into a larger running job if you want to squeeze in a small one
+
