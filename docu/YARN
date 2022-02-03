@@ -105,6 +105,19 @@ OOZIE bundles
 
 
 
+Apache Zeppelin
+-like the ipython notebook
+-lets you inteeractively run scripts on your data
+-can share notebooks with others in your cluster
+-can run Spark code interactively
+can execute SQL queries directly against SparkSQL
+-visualize queries
+-add own interpreters for different backends
+
+
+
+HUE - Hadoop User Experience
+
 
 
 
