@@ -1,0 +1,112 @@
+chapter 1: NOSQL vs relational databases/ key-value databases
+chapter 2: document databases
+
+
+chapter 1:
+RElational databases
+-uses tables/rows/columns
+-need a predefined schema/complicated to change
+-slow queries when joining multiple tables
+-vertically scalable
+	-scale by adding more power -ram, cpu
+	-more expensive
+-guarantee ACID transactions
+-typically closed source
+
+
+
+No SQL
+-non-relational
+-not only sql
+-don't use table/rows/columns
+-schema less/easy changes
+-fast queries
+-horizontal scalable/cheaper
+	-adding more machines
+-most don't support ACID 
+
+
+
+-->Types
+-key-value databses
+	-get/set values with associated keys
+	-keys:
+		-binary sequences
+		-unique
+		-can be genrated by algorithms
+		-no long keys
+
+	-values:
+		-associated with a key
+		-retrieve, set, delte a value by key
+		-size restrictions
+
+-popular key-value databses
+	-reids
+	-dynamo DB
+
+
+
+Advantages of Key-Value databases
+-key-value tuple
+-no defined schema/types
+-basic operations:
+	-put : inserts new key-value
+		   updates
+	-get : returns the value given by a key
+	-delete : removes a key and its value
+-fast operations
+-flexible: allow changes in data types as opposed to relational databases
+-add additional attributes
+-information stored in memory:  -fast reads/writes
+								-can lose data
+-can scale horizontally called Sharding
+
+
+Limitations
+-just search by key
+	-problem if we don't know key
+	-some can also search by value
+	-some can seach by several keys simultaneously
+-not complex queries
+
+
+
+
+When to use key-value databses
+-storing User sessions
+	-key: session id
+	-value: info about users
+-user profiles and user preferences
+-shopping carts
+-real-time recommendations
+-advertising
+-store the infomation as a value in a single object
+
+
+Unsuitable Cases
+-search data by its value
+-related data/joins
+
+
+
+Redis 
+-remote dictionary server
+-fast in-memory data structure
+-used as 
+	-databse
+	-cache
+	-message broker
+-supports Atomic operations
+-transactions: execution of group of commands
+-python, R, Java, JS
+-asynchronous replication
+-session storage
+-chatting, messaing and queues
+
+
+
+
+
+
+
