@@ -168,7 +168,68 @@ Unsuitable cases
 -joins in queries
 -scale horizontally
 -replication
--
+
+-single view applications: financial services, government, high tech
+-catalogs
+-content management
+-IOT
+
+
+
+
+
+Columns Family databases - no joins
+-store data in column families
+-wide colum databases
+-large volume of data
+-collection of columns called column family which can vary from one row to another
+-store date and time when the data was inserted
+-CASSANDRA, HBASE, ACCUMULO
+-columns can be added ro a row when needed
+-column family can have multiple rows
+
+
+Advantages
+-flexible: rows within a same column faimly can have differnt columns
+			-avoids filling with default values
+-speed: very fast writing/ reading
+-scale horizontally
+-designed to handle large volume of data
+
+Limitations
+-no multirow transactions
+-no joins support and sub-queries
+
+
+
+When to use?
+-large volumes of data
+-extreme write speeds
+
+Use Case
+-event logging: user logging, errors
+-content management systems
+-time series data: weather, traffic
+
+Unsuitable
+-prototyping or at begining of a project
+-complex queries and joins
+-not dealing with large amounts of data
+
+
+-->Cassandra
+-column-family
+-distributed
+-no master and slave
+-high availability
+-no single point of failure
+-python, java, scala
+-CQL, query language
+-similar syntax to SQL
+-doesn't support joins
+-no subqueries
+
+
 
 
 
