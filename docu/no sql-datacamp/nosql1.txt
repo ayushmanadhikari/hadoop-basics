@@ -114,7 +114,7 @@ Document Database
 -documents -->row
 -collection -->tables
 -schemaless
--fomats: JSON, YAML, XMAL, BSON
+-fomats: JSON, YAML, XML, BSON
 -keys: strings
 -more complex queries than key-value db
 -polymorphic: document within the same collection 				dont need to have same structure

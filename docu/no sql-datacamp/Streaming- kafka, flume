@@ -1,0 +1,32 @@
+Streaming
+How does data get into your cluster? Especially if it's "Big Data"?
+	-new log entries from web servers
+	-new stock trades
+-streaming lets you publish this data, in real time, to your cluster.
+	-and you can even process it in real time as it comes in.
+
+
+
+
+Kafka
+-get data from data srouces into your cluster
+-general purpose publish/subscribe messaging system
+-kafka servers store all incoming messages from publishers for some period of time, and publishes them to a stream of data called topic
+-kafka consumers subscribe to one or more topics and receive data as it's published
+-it's not just for hadoop
+
+-has 
+	-producers: produce data
+	-consumers: consume data
+	-db connectors: connectors for different dbs to store data 
+	-stream processors: structures data while streaming them
+
+
+
+Flume
+-3 components of Flume agent
+	-source: where is data coming from
+			can optionlly have channel selectors and interceptors
+	-channel: how data is transferred(memory or 	files)
+	-sink: where data is going
+		   organized into Sink Groups
