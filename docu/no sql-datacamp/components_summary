@@ -28,7 +28,7 @@ How the pieces Fit together!
 
 	-Spark: -based on Dag
 			-not just Api but process itself 
-			-very powerful toolkit for analyze and process data cross hadoop cluster
+			-very powerful toolkit for analyzing and process data across hadoop cluster
 
 	-HBase: -offer nosql interface following google b        bigtable picture
 			-architectured to favour consistency
@@ -45,6 +45,7 @@ How the pieces Fit together!
 
 	Data Ingestion
 	-sqoop: way to import/export data from relational database into cluster at scale using MapReduce
+
 
 	-Zookeeper: various systems use to keep track of things like who is the current master server
 
