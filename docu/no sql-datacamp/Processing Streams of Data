@@ -1,0 +1,30 @@
+Processing Streams of Data
+
+Spark Streaming
+-Big Data never stops!
+-analyze data streams in real time, instead of in huge batch jobs daily
+-processing of those chunk of data/RDDs can be done in parallel
+
+--DStream(Discretized Steams)
+-generates RDDs for each time step and can produce output at each time step
+-these DStreams can be processed continuously as long as there is new data coming in or for a given period of time
+-they can be processed in the sam eway as RDDs
+
+Common stateless transformations on DStreams
+-Map
+-Flatmap
+-Filter
+-reduceByKey
+
+Stateful data
+-also maintain a long-loved state on a DStream
+
+
+Windowing
+-allow you to compute results across a longer time period than your batch interval
+
+
+Batch intervak vs Slide interval vs Windows interval
+-batch interval is how often data is captured into a Dstream
+-slide interval is how often windowed tranformation is computed
+-windows interval is how far back in time the windowed transformation goes
