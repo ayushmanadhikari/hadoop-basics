@@ -1,0 +1,80 @@
+
+Overall Eagle View
+
+
+How the pieces Fit together!
+-Core Hadoop Ecosystem.. first 3 things
+	-HDFS: big data into blocks replicated across 	       cluster
+			-what gets stored where
+	
+	-YARN: managing the computation and processing of 	       the those data blocks
+		   -what gets run where
+
+	-MapReduce: transform and aggregate data across c            cluster using YARN to figure out how to d             distribute that work
+				-mapper.. tranform data
+				-reducers.. aggregate data
+
+
+
+	-Hive: -SQL like language on top of your data across	    allowing SQL like queries to analyze data in HDFS and using YARN and MapReduce to distribute processing of the query
+
+	-Pig: -same as hive
+			-scripting interface called PigLatin
+
+	-Tez: alternative to MapReduce
+			-use DAG
+			-efficient to MapReduce
+			-Hive and Pig have alternative for MapReduce which is Tez
+
+	-Spark: -based on Dag
+			-not just Api but process itself 
+			-very powerful toolkit for analyze and process data cross hadoop cluster
+
+	-HBase: -offer nosql interface following google b        bigtable picture
+			-architectured to favour consistency
+
+
+
+	External Data Storage
+	-MySQL
+	-Cassandra: nosql database
+				-favour availability all the time
+	-mongoDB: similar to HBase
+				-more general purpose
+
+
+	Data Ingestion
+	-sqoop: way to import/export data from relational database into cluster at scale using MapReduce
+
+	-Zookeeper: various systems use to keep track of things like who is the current master server
+
+	-oozie: maintains workflows
+			-let's you schedule jobs across cluster
+
+
+	Query Engines
+	-hue: cloudera answer to Ambari
+			-provide web user interface
+
+	-Zeppelin: notebook for interacting with the data
+
+	-Drill, Phoenix, Presto: 
+				-allow to write Sql queries that might span multiple storage or database technologies
+	
+
+	Streaming Technologies
+	-Apache Storm, Spark Streaming, Flink:
+				-processing real time data as they come in
+
+
+	Streaming data into cluster
+	-Kafka, Flume:
+			-technologies for streaming data into your cluster at scale
+			-move data from one cluster reliably and very high transaction rate 
+
+
+
+	Apache Ambari: -allows install and manage services
+					-provide web interface for working with some systems
+					 
+
