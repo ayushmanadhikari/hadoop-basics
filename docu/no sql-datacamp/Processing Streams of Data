@@ -1,5 +1,7 @@
 Processing Streams of Data
 
+
+
 Spark Streaming
 -Big Data never stops!
 -analyze data streams in real time, instead of in huge batch jobs daily
@@ -28,3 +30,55 @@ Batch intervak vs Slide interval vs Windows interval
 -batch interval is how often data is captured into a Dstream
 -slide interval is how often windowed tranformation is computed
 -windows interval is how far back in time the windowed transformation goes
+
+
+
+Structured Streaming 
+-it uses dataset/dataframes instead of RDDs/DStreams
+
+
+Adavantages of Structured Streaming
+-Streaming code looks a lot like quivalent non-streaming code
+-structured data allows Spark to represent data more efficiently
+
+
+
+
+
+
+Apache Strom
+-another framework for processing continuous streams of data on a cluster
+-can run on top of YARN
+-main diff from Spark Streaming storm works on individual events not micro-batches
+-
+-stream.. contains tuples of data which originates from spout
+-bolts.. process stream data as it's recieved
+-topology.. a graph of spouts and bolts that process your stream
+
+
+
+
+Flink
+-another framework for processing continuous streams of data on a cluster
+-can run on standalone cluster, or on top of YARN or MESOS
+-highly scalable
+-fault tolerant
+	-can survive failures while still guranteeing exactly-once processing
+-Flink can connect to
+
+
+Fink vs Spark Streaming vs Storm
+-Flink faster than Storm
+-does "real-time" streaming
+-has good Scala support like Spark Streaming
+-can process data based on event-time not when data was recieved
+	-impressive windowsing system
+	-major financial applications
+
+
+
+
+
+
+
+
